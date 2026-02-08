@@ -49,4 +49,4 @@ Sigue estos pasos para ejecutar el proyecto localmente:
 ## 👤 Autor
 
 - **Ignacio Tomás Dorigo** - [GitHub](https://github.com/ignacioDorigo)
-- **LinkedIn** - [LinkedIn](www.linkedin.com/in/ignacio-dorigo-3aa267203)
+- **LinkedIn** - [LinkedIn](https://www.linkedin.com/in/ignacio-dorigo-3aa267203)
