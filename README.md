@@ -44,8 +44,7 @@ Sigue estos pasos para ejecutar el proyecto localmente:
     ```bash
     npm run dev
     ```
-
-4**Crear archivo .env en la raíz del proyecto y poner Client ID de Unsplash**
+4.  **Crear archivo .env en la raíz del proyecto y poner Client ID de Unsplash**
 
     ```bash
     REACT_APP_UNSPLASH_KEY= acaVaSuApiKey
