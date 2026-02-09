@@ -98,10 +98,18 @@
 }
 
 .fotos {
-  columns: 3;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  columns: 1;
 }
+
+@media (min-width: 768px) {
+  .fotos {
+    columns: 3;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+
 
 h1 {
   text-align: center;

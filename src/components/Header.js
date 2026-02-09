@@ -11,6 +11,9 @@ export default function Header({ actualizarFotos }) {
   const formik = useFormik({
     initialValues: valorInicial,
     onSubmit: async (formulario) => {
+      if (formulario.palabraBuscar.length === 0) {
+        return;
+      }
       try {
         console.log(
           `https://api.unsplash.com/search/photos?query=${formulario.palabraBuscar}&per_page=20`,
