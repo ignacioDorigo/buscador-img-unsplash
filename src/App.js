@@ -1,10 +1,9 @@
-import { useFormik } from "formik";
+
 import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Foto from "./components/Foto/Foto";
 
-const apiKey = process.env.REACT_APP_API_KEY;
 
 export default function App() {
   const [fotos, setFotos] = useState([]);
