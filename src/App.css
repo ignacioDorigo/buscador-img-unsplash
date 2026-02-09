@@ -90,3 +90,19 @@
   stroke: #FFF;
 
 }
+
+.container {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.fotos {
+  columns: 3;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  text-align: center;
+}

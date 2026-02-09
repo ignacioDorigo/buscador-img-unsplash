@@ -1,50 +1,30 @@
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-const valorInicial = {
-  palabraBuscar: "",
-};
+import Header from "./components/Header";
+import Foto from "./components/Foto/Foto";
+
+const apiKey = process.env.REACT_APP_API_KEY;
+
 export default function App() {
-  const formik = useFormik({
-    initialValues: valorInicial,
-    onSubmit: async (formulario) => {
-      try {
-        console.log(formulario);
-      } catch (error) {
-        console.log(error);
-      }
-    },
-  });
+  const [fotos, setFotos] = useState([]);
+
+  const actualizarFotos = (data) => {
+    setFotos(data);
+    console.log(data);
+  };
+
   return (
     <div>
-      <header className="header">
-        <form onSubmit={formik.handleSubmit} className="formulario">
-          <input
-            type="text"
-            className="formulario__input"
-            name="palabraBuscar"
-            {...formik.getFieldProps("palabraBuscar")}
-          ></input>
-          {/* <button type="submit" className="formulario__boton"></button> */}
-          <svg
-            type="submit"
-            onClick={formik.handleSubmit}
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#000000"
-            strokeWidth="1"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="boton__svg"
-          >
-            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-            <path d="M21 21l-6 -6" />
-          </svg>
-        </form>
-      </header>
+      <Header actualizarFotos={actualizarFotos}></Header>
+      <h1>Buscador de Imagenes API unplash</h1>
+      <div className="container">
+        <div className="fotos">
+          {fotos.map((foto, index) => (
+            <Foto key={index} foto={foto}></Foto>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

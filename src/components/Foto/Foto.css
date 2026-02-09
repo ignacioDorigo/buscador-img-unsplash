@@ -1,0 +1,22 @@
+.foto {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    break-inside: avoid;
+}
+
+.foto:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transform: scaleY(1.01);
+}
+
+.foto__img {
+    width: 100%;
+    /* max-height: 350px; */
+}
+
+.foto__descripcion {
+    text-align: center;
+}
