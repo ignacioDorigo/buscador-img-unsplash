@@ -114,3 +114,28 @@
 h1 {
   text-align: center;
 }
+
+.botones {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.boton {
+  border: 1px solid #282c34;
+  background-color: #FFF;
+  font-weight: bold;
+  color: #282c34;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border-width: 2px;
+  transition: all .3s ease-in-out;
+}
+
+.boton:hover {
+  color: #FFF;
+  background-color: #282c34;
+}

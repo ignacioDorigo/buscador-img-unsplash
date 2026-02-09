@@ -5,33 +5,11 @@ const valorInicial = {
   palabraBuscar: "",
 };
 
-const apiKey = process.env.REACT_APP_API_KEY;
-
-export default function Header({ actualizarFotos }) {
+export default function Header({ resetearBusqueda }) {
   const formik = useFormik({
     initialValues: valorInicial,
-    onSubmit: async (formulario) => {
-      if (formulario.palabraBuscar.length === 0) {
-        return;
-      }
-      try {
-        console.log(
-          `https://api.unsplash.com/search/photos?query=${formulario.palabraBuscar}&per_page=20`,
-        );
-        const buscarFotos = await fetch(
-          `https://api.unsplash.com/search/photos?query=${formulario.palabraBuscar}&per_page=20`,
-          {
-            headers: {
-              Authorization: `Client-ID ${apiKey}`,
-            },
-          },
-        );
-        const fotosJSON = await buscarFotos.json();
-        const fotos = fotosJSON.results;
-        actualizarFotos(fotos);
-      } catch (error) {
-        console.log(error);
-      }
+    onSubmit: (formulario) => {
+      resetearBusqueda(formulario.palabraBuscar);
     },
   });
   return (
